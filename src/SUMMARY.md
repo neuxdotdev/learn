@@ -3,7 +3,7 @@
 # Sidebar
 
 - [Home](./readme.md)
-- [Sitemap](./sidebar)
+- [Sitemap](./sidebar.md)
     - [Python](./python/readme.md)
         - [00 Python Basics](./python/00-python-basics/readme.md)
             - [01 Intro](./python/00-python-basics/01-intro.md)
