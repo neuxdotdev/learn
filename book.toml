@@ -1,0 +1,52 @@
+[book]
+title = 'Learn Programming language'
+authors = ['neuxdotdev']
+description = 'Learn Any Programming language'
+language = 'en'
+text-direction = 'ltr'
+
+[rust]
+edition = '2024'
+
+[build]
+build-dir = 'book'
+create-missing = true             
+use-default-preprocessors = true  
+
+[output.html]
+default-theme = 'rust'
+preferred-dark-theme = 'navy'
+smart-punctuation = true
+definition-lists = true
+admonitions = true
+mathjax-support = true
+no-section-label = false
+git-repository-url = 'https://github.com/neuxdotdev/learn.git'
+git-repository-icon = 'fab-github'
+edit-url-template = 'https://github.com/neuxdotdev/learn/edit/main/{path}'
+site-url = 'https://neuxdotdev.github.io/learn/'
+cname = 'learn.neuxdotdev.github.io'
+sidebar-header-nav = true
+
+[output.html.print]
+enable = true    
+page-break = true 
+
+[output.html.playground]
+editable = true   
+copyable = true          
+copy-js = true
+line-numbers = true
+runnable = true
+
+[output.html.search]
+enable = true
+limit-results = 30
+teaser-word-count = 30   # number of words used for a search result teaser
+use-boolean-and = true   # multiple search terms must all match
+boost-title = 2          # ranking boost factor for matches in headers
+boost-hierarchy = 1      # ranking boost factor for matches in page names
+boost-paragraph = 1      # ranking boost factor for matches in text
+expand = true            # partial words will match longer terms
+heading-split-level = 3  # link results to heading levels
+copy-js = true           # include Javascript code for search
