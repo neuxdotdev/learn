@@ -9,8 +9,8 @@ text-direction = 'ltr'
 edition = '2024'
 
 [build]
-build-dir = 'book'
-create-missing = true             
+build-dir = 'book'  
+create-missing = false
 use-default-preprocessors = true  
 
 [output.html]
@@ -41,12 +41,9 @@ runnable = true
 
 [output.html.search]
 enable = true
-limit-results = 30
-teaser-word-count = 30   # number of words used for a search result teaser
 use-boolean-and = true   # multiple search terms must all match
 boost-title = 2          # ranking boost factor for matches in headers
 boost-hierarchy = 1      # ranking boost factor for matches in page names
 boost-paragraph = 1      # ranking boost factor for matches in text
 expand = true            # partial words will match longer terms
-heading-split-level = 3  # link results to heading levels
 copy-js = true           # include Javascript code for search
