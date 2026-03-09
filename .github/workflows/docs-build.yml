@@ -22,14 +22,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        
+      - name: Cache mdBook binary
+        id: cache-mdbook
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/mdbook
+          key: ${{ runner.os }}-mdbook-v0.5.2
 
-      - name: Install mdBook
+      - name: Install mdBook (binary)
+        if: steps.cache-mdbook.outputs.cache-hit != 'true'
         run: |
-          cargo install mdbook --locked
+          # Download dan ekstrak binary mdBook versi terbaru (misal v0.5.2)
+          curl -L https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz | tar xz
+          mkdir -p ~/.cargo/bin
+          mv mdbook ~/.cargo/bin/
+
+      - name: Add to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
       - name: Build documentation
-        run: |
-          mdbook build
+        run: mdbook build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
