@@ -154,7 +154,7 @@ generate_sidebar() {
 
     # Tulis header
     {
-        echo "# Sidebar"
+        echo "# Summary"
         echo ""
     } > "$temp_file"
 
