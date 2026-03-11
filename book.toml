@@ -14,8 +14,8 @@ create-missing = false
 use-default-preprocessors = true  
 
 [output.html]
-default-theme = 'rust'
-preferred-dark-theme = 'navy'
+default-theme = 'light'
+preferred-dark-theme = 'coal'
 smart-punctuation = true
 definition-lists = true
 admonitions = true
@@ -27,8 +27,6 @@ edit-url-template = 'https://github.com/neuxdotdev/learn/edit/main/{path}'
 site-url = 'https://neuxdotdev.github.io/learn/'
 cname = 'learn.neuxdotdev.github.io'
 sidebar-header-nav = true
-additional-css = ["theme/pagetoc.css"]
-additional-js = ["theme/pagetoc.js"]
 
 [output.html.print]
 enable = true
@@ -49,5 +47,3 @@ boost-hierarchy = 1      # ranking boost factor for matches in page names
 boost-paragraph = 1      # ranking boost factor for matches in text
 expand = true            # partial words will match longer terms
 copy-js = true           # include Javascript code for search
-
-[output.pdf]

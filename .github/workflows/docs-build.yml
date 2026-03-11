@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Cache mdBook binary
         id: cache-mdbook
         uses: actions/cache@v4
